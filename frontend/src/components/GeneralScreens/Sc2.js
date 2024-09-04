@@ -4,6 +4,7 @@ import { Row, Col, Container } from "react-bootstrap";
 import { FiMail } from "react-icons/fi";
 import be from "../../Assets/be.jpg";
 import de from "../../Assets/de.jpg";
+import Testimonies from './Testimonies'
 
 export default function Sc2() {
   const [email, setEmail] = useState("");
@@ -100,6 +101,7 @@ export default function Sc2() {
           </Col>
         </Row>
       </Container>
+      <Testimonies />
     </Styles>
   );
 }

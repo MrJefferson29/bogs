@@ -84,7 +84,7 @@ const About = () => {
       <Section>
         <Title>Our Mission</Title>
         <p>
-          We aim to serve the US and UK gun market by offering a professional platform for trade and private sellers. Our goal is to provide excellent coverage, accuracy, and a friendly service.
+          We aim to serve the US gun market by offering a professional platform for trade and private sellers. Our goal is to provide excellent coverage, accuracy, and a friendly service.
         </p>
       </Section>
       

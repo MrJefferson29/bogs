@@ -40,7 +40,7 @@ function Footer() {
                 </SocialIcon>
               </SocialIcons>
               <br />
-        <p>Soho, UK</p> <p>Boston, USA</p>
+ <p>Boston, USA</p>
             </FooterSection>
           </Col>
         </Row>
