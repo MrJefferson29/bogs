@@ -1,0 +1,175 @@
+import React from 'react';
+import styled from 'styled-components';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faHeadset } from '@fortawesome/free-solid-svg-icons';
+
+export default function Header() {
+  return (
+    <HeaderStyles>
+      <header className="header-container">
+        <div className="header-content">
+          <h1 className="logo">Logo</h1>
+          <nav className="header-nav" aria-label="Main navigation">
+            <ul className="nav-links">
+              <li><a href="#categories" className="link">Categories</a></li>
+              <li><a href="#services" className="link">Services</a></li>
+              <li><a href="#community" className="link">Community</a></li>
+              <li><a href="#saved" className="link">Saved</a></li>
+            </ul>
+          </nav>
+          <div className="auth-support">
+            <a href="#signin" className="link">Sign in</a>
+            <FontAwesomeIcon icon={faHeadset} className="icon" aria-label="Support" />
+            <button type="button" className="sell-button" aria-label="Sell your gun now">Sell your gun</button>
+          </div>
+        </div>
+      </header>
+    </HeaderStyles>
+  );
+}
+
+const HeaderStyles = styled.div`
+  .header-container {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+    padding: 15px 30px;
+  }
+
+  .header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+  }
+
+  .header-nav {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    overflow-x: auto; /* Allow scrolling if necessary */
+  }
+
+  .nav-links {
+    display: flex;
+    flex-wrap: nowrap; /* Prevent wrapping */
+    gap: 1.5rem; /* Adjust gap between items */
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  .link {
+    font-size: 1.1rem;
+    font-weight: 700;
+    color: #333;
+    text-decoration: none;
+    cursor: pointer;
+    white-space: nowrap; /* Prevent text wrapping within a single link */
+
+    &:hover, &:focus {
+      color: #007bff;
+      outline: none;
+    }
+  }
+
+  .auth-support {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-left: auto; /* Pushes auth-support to the right */
+    margin-top: 1rem; /* Added for vertical spacing in responsive design */
+  }
+
+  .icon {
+    font-size: 1.25rem;
+    color: #333;
+    cursor: pointer;
+
+    &:hover, &:focus {
+      color: #007bff;
+      outline: none;
+    }
+  }
+
+  .sell-button {
+    background-color: #ff9900;
+    color: #fff;
+    padding: 0.75rem 1rem;
+    border: none;
+    border-radius: 0.3125rem;
+    font-size: 0.875rem;
+    font-weight: 600;
+    cursor: pointer;
+
+    &:hover {
+      background-color: #e68a00;
+    }
+
+    &:focus {
+      outline: 2px solid #007bff;
+      outline-offset: 2px;
+    }
+  }
+
+  @media (max-width: 768px) {
+    .header-container {
+      padding: 1.25rem;
+    }
+
+    .header-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .header-nav {
+      width: 100%;
+    }
+
+    .nav-links {
+      gap: 1rem;
+    }
+
+    .link {
+      font-size: 0.875rem; /* Slightly smaller font size */
+    }
+
+    .sell-button {
+      padding: 0.75rem 1rem;
+      font-size: 1rem;
+    }
+  }
+
+  @media (max-width: 480px) {
+    .header-content {
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .logo {
+      align-self: flex-start;
+    }
+
+    .header-nav {
+      width: 100%;
+    }
+
+    .nav-links {
+      gap: 0.75rem;
+    }
+
+    .link {
+      font-size: 0.75rem; /* Adjusted font size */
+    }
+
+    .sell-button {
+      padding: 0.75rem 1rem;
+      font-size: 0.875rem;
+    }
+  }
+`;
