@@ -5,11 +5,6 @@ import React from "react";
 import Slider from "react-slick";
 import styled from "styled-components";
 import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
-import arah from "../../Assets/arah.jpg";
-import miller from "../../Assets/miller.jpeg";
-import michael from "../../Assets/michael.jpeg";
-import emily from "../../Assets/mob.jpg";
-import robert from "../../Assets/robert.jpg";
 
 // Testimonial data
 const testimonials = [
@@ -18,7 +13,6 @@ const testimonials = [
     feedback:
       "I’ve never felt more secure about buying a package! I love how they prioritize gun shipping care—everything always arrives in perfect condition. Highly recommend!",
     location: "New York, NY",
-    imageUrl: arah,
     rating: 5,
   },
   {
@@ -26,7 +20,6 @@ const testimonials = [
     feedback:
       "Best Online Guns truly sets the standard for gun services. My gun arrived on time, and I’m amazed at how careful they are with handling antique items.",
     location: "Los Angeles, CA",
-    imageUrl: miller,
     rating: 4.5,
   },
   {
@@ -34,7 +27,6 @@ const testimonials = [
     feedback:
       "Their fun-facts about every item really keeps me mazed, and their 24/7 customer support has always been there to help me with any questions.",
     location: "Chicago, IL",
-    imageUrl: michael,
     rating: 4,
   },
   {
@@ -42,7 +34,6 @@ const testimonials = [
     feedback:
       "BOGS is hands down the best guns service out there! I love that I can feel safe and secure, knowing that I have a registered firearm, and their 24-hour support means I can always reach someone if I have a concern.",
     location: "Houston, TX",
-    imageUrl: emily,
     rating: 5,
   },
   {
@@ -50,7 +41,6 @@ const testimonials = [
     feedback:
       "I can't praise Best Online Guns enough for their exceptional service! The care they take with each licensed firearm is evident—a top-tier service that I trust completely!",
     location: "Miami, FL",
-    imageUrl: robert,
     rating: 4.5,
   },
 ];
@@ -80,6 +70,10 @@ const Container = styled.div`
   max-width: 1200px;
   margin: 0 auto;
   padding: 2rem 0;
+
+  @media (max-width: 576px) {
+    padding: 1rem 0;
+  }
 `;
 
 const TestimonialCard = styled.div`
@@ -91,6 +85,11 @@ const TestimonialCard = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  transition: transform 0.3s ease;
+
+  &:hover {
+    transform: translateY(-5px);
+  }
 `;
 
 const Stars = styled.div`
@@ -99,42 +98,52 @@ const Stars = styled.div`
   margin-bottom: 1rem;
 `;
 
-const ProfileImage = styled.img.attrs({
-  loading: "lazy",
-})`
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-  margin-bottom: 1rem;
-  object-fit: cover;
-`;
-
 const Feedback = styled.p`
-  font-size: 1.1rem;
-  color: #555;
+  font-size: 1.2rem;
+  color: #333;
   margin-bottom: 1.5rem;
   font-weight: 400;
-  line-height: 1.6;
+  line-height: 1.8;
+  max-width: 85%;
+  margin: 0 auto;
+  font-style: italic;
+
   @media (max-width: 768px) {
+    font-size: 1.1rem;
+  }
+
+  @media (max-width: 576px) {
     font-size: 1rem;
   }
 `;
 
 const Name = styled.h3`
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   color: #222;
   margin-bottom: 0.5rem;
   font-weight: 600;
+  text-transform: uppercase;
+
   @media (max-width: 768px) {
+    font-size: 1.2rem;
+  }
+
+  @media (max-width: 576px) {
     font-size: 1.1rem;
   }
 `;
 
 const Location = styled.p`
   font-size: 1rem;
-  color: #888;
+  color: #666;
+  font-weight: 500;
+
   @media (max-width: 768px) {
     font-size: 0.9rem;
+  }
+
+  @media (max-width: 576px) {
+    font-size: 0.85rem;
   }
 `;
 
@@ -146,7 +155,7 @@ const TestimonialSlider = () => {
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 3000,
+    autoplaySpeed: 5000,
     arrows: false,
   };
 
@@ -159,10 +168,6 @@ const TestimonialSlider = () => {
             aria-label={`Testimonial from ${testimonial.name}`}
           >
             <Stars>{renderStars(testimonial.rating)}</Stars>
-            <ProfileImage
-              src={testimonial.imageUrl}
-              alt={`${testimonial.name}'s profile`}
-            />
             <Feedback>"{testimonial.feedback}"</Feedback>
             <Name>{testimonial.name}</Name>
             <Location>{testimonial.location}</Location>

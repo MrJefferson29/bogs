@@ -4,7 +4,7 @@ import { Row, Col, Container } from "react-bootstrap";
 import { FiMail } from "react-icons/fi";
 import be from "../../Assets/be.jpg";
 import de from "../../Assets/de.jpg";
-import Testimonies from './Testimonies'
+import TestimonialSlider from './Testimonies'
 
 export default function Sc2() {
   const [email, setEmail] = useState("");
@@ -66,7 +66,7 @@ export default function Sc2() {
             <img src={de} alt="Advice" />
           </Col>
           <Col md={12} lg={6}>
-            <h2>A Hunter's Introduction To Deer Stalking in the UK & US</h2>
+            <h2>A Hunter's Introduction To Deer Stalking in the & US</h2>
             <p>
               If you're an avid hunter or gun enthusiast, chances are you've heard
               about deer stalking. Whether you're just starting out as a curious
@@ -89,10 +89,10 @@ export default function Sc2() {
             <p>
               One of our amazing partners at this year’s National Shooting Show,
               was Savage Arms, being represented at The National Shooting Show by
-              their US & UK-based distributors, Viking Arms. Savage Arms is driven by a
+              their US-based distributors, Viking Arms. Savage Arms is driven by a
               spirit of American ingenuity, constantly pushing performance higher
               through innovative technology and collaboration with shooters,
-              hunters, and guides. We spoke to Andy Norris, UK Sales Manager for
+              hunters, and guides. We spoke to Andy Norris, USA Sales Manager for
               Viking Arms. The National Shooting Show Andy was more
             </p>
             <p className="read-more">read more</p>
@@ -100,8 +100,10 @@ export default function Sc2() {
 
           </Col>
         </Row>
+        <center><p style={{fontSize: '1.7rem', fontWeight: '700'}}>What they say about us</p></center>
+      <TestimonialSlider />
+
       </Container>
-      <Testimonies />
     </Styles>
   );
 }
