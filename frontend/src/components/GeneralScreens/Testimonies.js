@@ -18,7 +18,7 @@ const testimonials = [
     feedback:
       "I’ve never felt more secure about buying a package! I love how they prioritize gun shipping care—everything always arrives in perfect condition. Highly recommend!",
     location: "New York, NY",
-    imageUrl: arah, // Replace with actual image URL
+    imageUrl: arah,
     rating: 5,
   },
   {
@@ -26,7 +26,7 @@ const testimonials = [
     feedback:
       "Best Online Guns truly sets the standard for gun services. My gun arrived on time, and I’m amazed at how careful they are with handling antique items.",
     location: "Los Angeles, CA",
-    imageUrl: miller, // Replace with actual image URL
+    imageUrl: miller,
     rating: 4.5,
   },
   {
@@ -34,23 +34,23 @@ const testimonials = [
     feedback:
       "Their fun-facts about every item really keeps me mazed, and their 24/7 customer support has always been there to help me with any questions.",
     location: "Chicago, IL",
-    imageUrl: michael, // Replace with actual image URL
+    imageUrl: michael,
     rating: 4,
   },
   {
     name: "Sean Tucket",
     feedback:
-      "BOGS is hands down the best guns service out there! I love that I can feel safe and secure, knowing that I have a registerred firearm, and their 24-hour support means I can always reach someone if I have a concern.",
+      "BOGS is hands down the best guns service out there! I love that I can feel safe and secure, knowing that I have a registered firearm, and their 24-hour support means I can always reach someone if I have a concern.",
     location: "Houston, TX",
-    imageUrl: emily, // Replace with actual image URL
+    imageUrl: emily,
     rating: 5,
   },
   {
     name: "Robert Brown",
     feedback:
-      "I can't praise Best Online Guns enough for their exceptional service! The care they take with each liscenced firearm is evident—a top-tier service that I trust completely!",
+      "I can't praise Best Online Guns enough for their exceptional service! The care they take with each licensed firearm is evident—a top-tier service that I trust completely!",
     location: "Miami, FL",
-    imageUrl: robert, // Replace with actual image URL
+    imageUrl: robert,
     rating: 4.5,
   },
 ];
@@ -99,11 +99,14 @@ const Stars = styled.div`
   margin-bottom: 1rem;
 `;
 
-const ProfileImage = styled.img`
-  width: 80px;
-  height: 80px;
+const ProfileImage = styled.img.attrs({
+  loading: "lazy",
+})`
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   margin-bottom: 1rem;
+  object-fit: cover;
 `;
 
 const Feedback = styled.p`
