@@ -135,7 +135,7 @@ const gunsData = [
     subcategory: "Air pistol",
     condition: "Used",
     make: "CO2",
-    price: "$ 95",
+    price: "$ 400",
     certificate: "Firearm - Section 1",
     description:
       "In good condition and working order, fitted with a silencer adapter, comes with two 8 shot mags, one gas mag, spare back strap and original case. The rear section seem to be lighter grey colour to the front. Postage is $5 PayPal with fee or bank transfer fine",
