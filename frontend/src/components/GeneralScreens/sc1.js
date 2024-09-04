@@ -60,7 +60,7 @@ export default function Sc1() {
             <p className="ad-description">
               Andrew Bottomley Antique Arms & Armour. Mail Order Only. Established since 1968.
             </p>
-            <div className="ad-price">£1,400</div>
+            <div className="ad-price">$1,400</div>
           </div>
         </div>
       </section>
