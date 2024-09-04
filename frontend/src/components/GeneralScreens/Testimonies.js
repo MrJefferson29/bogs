@@ -8,7 +8,7 @@ import { FaStar, FaStarHalfAlt, FaRegStar } from "react-icons/fa";
 import arah from "../../Assets/arah.jpg";
 import miller from "../../Assets/miller.jpeg";
 import michael from "../../Assets/michael.jpeg";
-import emily from "../../Assets/emily.jpeg";
+import emily from "../../Assets/mob.jpg";
 import robert from "../../Assets/robert.jpg";
 
 // Testimonial data
@@ -38,7 +38,7 @@ const testimonials = [
     rating: 4,
   },
   {
-    name: "Emily Davis",
+    name: "Sean Tucket",
     feedback:
       "BOGS is hands down the best guns service out there! I love that I can feel safe and secure, knowing that I have a registerred firearm, and their 24-hour support means I can always reach someone if I have a concern.",
     location: "Houston, TX",
